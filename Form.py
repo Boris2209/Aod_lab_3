@@ -113,6 +113,9 @@ class Form():
                 result += ('\n' + self.str_p(path))
         result = "Ответ: максимальная длина -  " + str(l_max) + ", у простого путя (путей): \n" + result
         self.labelResult["text"] = result
+        
+        # продублирую вывод в messagebox
+        messagebox.showinfo('Ответ', result)
 
     """следующие методы для открисовки графа"""
     def draw_node(self, x, y, text, r=RADIUS):
